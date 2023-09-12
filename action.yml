@@ -13,7 +13,7 @@ runs:
     - shell: bash
       run: |
         echo "Hello World!"
-#        cat README.md
+        cat github-action-hello-world/README.md
 
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3

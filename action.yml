@@ -1,19 +1,19 @@
 name: Hello World
+description: ""
+author: vm-001
 
-on:
-  workflow_call:
+runs:
+  using: composite
+  steps:
+    - name: Checkout separate repo
+      uses: actions/checkout@v2
+      with:
+        repository: vm-001/github-action-hello-world
 
-jobs:
-  hello-world:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout separate repo
-        uses: actions/checkout@v2
-        with:
-          repository: vm-001/github-action-hello-world
-      - run: |
-          echo "Hello World!"
-          cat README.md
+    - shell: bash
+      run: |
+        echo "Hello World!"
+        cat README.md
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3

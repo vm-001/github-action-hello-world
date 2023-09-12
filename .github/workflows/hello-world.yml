@@ -13,4 +13,4 @@ jobs:
           repository: vm-001/github-action-hello-world
       - run: |
           echo "Hello World!"
-          cat text.txt
+          cat README.md

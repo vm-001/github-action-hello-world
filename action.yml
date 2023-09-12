@@ -5,11 +5,11 @@ author: vm-001
 runs:
   using: composite
   steps:
-#    - name: Checkout separate repo
-#      uses: actions/checkout@v2
-#      with:
-#        repository: vm-001/github-action-hello-world
-
+    - name: Checkout separate repo
+      uses: actions/checkout@v2
+      with:
+        repository: vm-001/github-action-hello-world
+        path: github-action-hello-world
     - shell: bash
       run: |
         echo "Hello World!"

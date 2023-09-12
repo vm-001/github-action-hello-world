@@ -7,6 +7,10 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout separate repo
+        uses: actions/checkout@v2
+        with:
+          repository: vm-001/github-action-hello-world
       - run: |
           echo "Hello World!"
           cat text.txt
